@@ -30,6 +30,7 @@ po/wok.pot
 src/firewalld.xml
 src/wok.conf.in
 src/wok/API.json
+src/nginx/wok.conf
 src/wok/plugins/sample/API.json
 src/wok/plugins/sample/po/LINGUAS
 src/wok/plugins/sample/po/Makefile.in.in
