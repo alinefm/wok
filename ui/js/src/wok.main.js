@@ -53,7 +53,7 @@ wok.startNotificationWebSocket = function () {
     var addr = window.location.hostname + ':' + window.location.port;
     var token = wok.urlSafeB64Encode('woknotifications').replace(/=*$/g, "");
     var url = 'wss://' + addr + '/websockify?token=' + token;
-    wok.notificationsWebSocket = new WebSocket(url, ['base64']);
+    wok.notificationsWebSocket = new WebSocket(url);
 
     wok.notificationsWebSocket.onmessage = function(event) {
         var buffer_rcv = window.atob(event.data);

@@ -121,3 +121,14 @@ def remove_proxy_token(name):
         os.unlink(os.path.join(WS_TOKENS_DIR, name))
     except OSError:
         pass
+
+
+# This is causing issues with async notifications
+# needs to include base64 in here, maybe
+# class CompatibleWebSocket(WebSocket):
+#     def select_subprotocol(self, protocols):
+#         # Handle old websockify clients that still specifiy a sub-protocol
+#         if 'binary' in protocols:
+#             return 'binary'
+#         else:
+#             return ''
